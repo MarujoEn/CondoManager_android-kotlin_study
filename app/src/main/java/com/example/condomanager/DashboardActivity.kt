@@ -29,6 +29,13 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnAuthorization = findViewById<Button>(R.id.btnAuthorization)
+
+        btnAuthorization.setOnClickListener {
+            val intent = Intent(this, AuthorizationActivity::class.java)
+            startActivity(intent)
+        }
+
         // Repita o processo para os outros botões conforme formos criando as telas
     }
 }

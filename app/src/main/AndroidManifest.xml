@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CondoManager">
         <activity
+            android:name=".AuthorizationActivity"
+            android:exported="false" />
+        <activity
             android:name=".ReservationsActivity"
             android:exported="false" />
         <activity

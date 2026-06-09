@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAuth"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#4F46E5"
+        app:title="Authorize Visitor"
+        app:titleTextColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/edtVisitorName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="24dp"
+        android:hint="Visitor's Full Name"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background_normal"
+        app:layout_constraintTop_toBottomOf="@id/toolbarAuth"/>
+
+    <EditText
+        android:id="@+id/edtVisitorDoc"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="Document (RG / CPF)"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background_normal"
+        app:layout_constraintTop_toBottomOf="@id/edtVisitorName"/>
+
+    <EditText
+        android:id="@+id/edtAuthNotes"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="Notes (e.g., Delivery, Family, Service)"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background_normal"
+        app:layout_constraintTop_toBottomOf="@id/edtVisitorDoc"/>
+
+    <Button
+        android:id="@+id/btnSaveAuth"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="24dp"
+        android:text="Register Authorization"
+        android:backgroundTint="#4F46E5"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/edtAuthNotes"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
