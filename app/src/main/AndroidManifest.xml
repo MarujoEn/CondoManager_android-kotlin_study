@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CondoManager">
         <activity
+            android:name=".MovingActivity"
+            android:exported="false" />
+        <activity
             android:name=".WallActivity"
             android:exported="false" />
         <activity

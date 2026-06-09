@@ -43,6 +43,13 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnMoving = findViewById<Button>(R.id.btnMoving)
+
+        btnMoving.setOnClickListener {
+            val intent = Intent(this, MovingActivity::class.java)
+            startActivity(intent)
+        }
+
         // Repita o processo para os outros botões conforme formos criando as telas
     }
 }
