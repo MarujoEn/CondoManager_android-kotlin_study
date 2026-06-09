@@ -16,49 +16,60 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/edtMovingDate"
+        android:id="@+id/edtMovingName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="24dp"
-        android:hint="Moving Date (e.g., 07/20/2026)"
-        android:inputType="date"
+        android:hint="Responsible Name"
+        android:inputType="textPersonName"
         android:padding="12dp"
         android:background="@android:drawable/editbox_background_normal"
         app:layout_constraintTop_toBottomOf="@id/toolbarMoving"/>
 
     <EditText
-        android:id="@+id/edtMovingTime"
+        android:id="@+id/edtMovingApt"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
-        android:hint="Preferred Time (e.g., 09:00 AM)"
-        android:inputType="time"
+        android:hint="Apartment Number"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background_normal"
+        app:layout_constraintTop_toBottomOf="@id/edtMovingName"/>
+
+    <EditText
+        android:id="@+id/edtMovingDate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="Date (e.g., 07/20/2026)"
+        android:inputType="date"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background_normal"
+        app:layout_constraintTop_toBottomOf="@id/edtMovingApt"/>
+
+    <EditText
+        android:id="@+id/edtMovingType"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:hint="Type (Move In / Move Out)"
+        android:inputType="text"
         android:padding="12dp"
         android:background="@android:drawable/editbox_background_normal"
         app:layout_constraintTop_toBottomOf="@id/edtMovingDate"/>
-
-    <EditText
-        android:id="@+id/edtMovingNotes"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginHorizontal="24dp"
-        android:layout_marginTop="16dp"
-        android:hint="Notes (e.g., Moving In, Moving Out, Large Truck)"
-        android:inputType="textMultiLine"
-        android:gravity="top"
-        android:padding="12dp"
-        android:background="@android:drawable/editbox_background_normal"
-        app:layout_constraintTop_toBottomOf="@id/edtMovingTime"/>
 
     <Button
         android:id="@+id/btnSaveMoving"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_margin="24dp"
-        android:text="Schedule Moving Date"
+        android:text="Schedule"
         android:backgroundTint="#4F46E5"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/edtMovingNotes"/>
+        app:layout_constraintTop_toBottomOf="@id/edtMovingType"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

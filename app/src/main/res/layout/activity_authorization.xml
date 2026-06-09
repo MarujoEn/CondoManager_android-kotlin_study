@@ -39,14 +39,13 @@
         app:layout_constraintTop_toBottomOf="@id/edtVisitorName"/>
 
     <EditText
-        android:id="@+id/edtAuthNotes"
+        android:id="@+id/edtAuthApartment"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:layout_marginHorizontal="24dp"
         android:layout_marginTop="16dp"
-        android:hint="Notes (e.g., Delivery, Family, Service)"
-        android:inputType="textMultiLine"
-        android:gravity="top"
+        android:hint="Apartment Number"
+        android:inputType="number"
         android:padding="12dp"
         android:background="@android:drawable/editbox_background_normal"
         app:layout_constraintTop_toBottomOf="@id/edtVisitorDoc"/>
@@ -59,6 +58,6 @@
         android:text="Register Authorization"
         android:backgroundTint="#4F46E5"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/edtAuthNotes"/>
+        app:layout_constraintTop_toBottomOf="@id/edtAuthApartment"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

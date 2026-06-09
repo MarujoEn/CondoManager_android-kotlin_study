@@ -13,7 +13,6 @@ class DashboardActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dashboard)
 
         // Mapeando o botão de Contatos como exemplo
-        val btnContacts = findViewById<Button>(R.id.btnContacts)
         val btnInvoices = findViewById<Button>(R.id.btnInvoices)
         val btnReservations = findViewById<Button>(R.id.btnReservations)
 
@@ -47,6 +46,13 @@ class DashboardActivity : AppCompatActivity() {
 
         btnMoving.setOnClickListener {
             val intent = Intent(this, MovingActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnContacts = findViewById<Button>(R.id.btnContacts)
+
+        btnContacts.setOnClickListener {
+            val intent = Intent(this, ContactsActivity::class.java)
             startActivity(intent)
         }
 

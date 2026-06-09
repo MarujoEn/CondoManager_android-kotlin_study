@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import android.widget.Button
 
 // Modelo para o Aviso do Mural
 data class WallNotice(val title: String, val date: String, val message: String)
@@ -29,6 +30,11 @@ class WallActivity : AppCompatActivity() {
 
         rvWall.layoutManager = LinearLayoutManager(this)
         rvWall.adapter = WallAdapter(noticeList)
+
+        val btnBack = findViewById<Button>(R.id.btnBackWall)
+        btnBack.setOnClickListener {
+            finish() // Isso simula o clicar na seta de voltar do celular
+        }
     }
 
     // O Adapter interno para desenhar os itens na lista

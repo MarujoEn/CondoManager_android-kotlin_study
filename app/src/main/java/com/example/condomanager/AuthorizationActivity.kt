@@ -14,18 +14,19 @@ class AuthorizationActivity : AppCompatActivity() {
 
         val edtName = findViewById<EditText>(R.id.edtVisitorName)
         val edtDoc = findViewById<EditText>(R.id.edtVisitorDoc)
+        val edtApartment = findViewById<EditText>(R.id.edtAuthApartment)
         val btnSave = findViewById<Button>(R.id.btnSaveAuth)
 
         btnSave.setOnClickListener {
             val name = edtName.text.toString().trim()
             val doc = edtDoc.text.toString().trim()
+            val apt = edtApartment.text.toString().trim()
 
-            if (name.isEmpty() || doc.isEmpty()) {
+            if (name.isEmpty() || doc.isEmpty() || apt.isEmpty()) {
                 Toast.makeText(this, "Please fill in all fields!", Toast.LENGTH_SHORT).show()
             } else {
-                // Simula o salvamento com sucesso
-                Toast.makeText(this, "Visitor $name authorized successfully!", Toast.LENGTH_LONG).show()
-                finish() // Fecha essa tela e volta para o painel automaticamente
+                Toast.makeText(this, "Visitor $name authorized for Apt $apt!", Toast.LENGTH_LONG).show()
+                finish()
             }
         }
     }

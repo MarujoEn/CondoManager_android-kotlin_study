@@ -12,19 +12,23 @@ class MovingActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_moving)
 
+        val edtName = findViewById<EditText>(R.id.edtMovingName)
+        val edtApt = findViewById<EditText>(R.id.edtMovingApt)
         val edtDate = findViewById<EditText>(R.id.edtMovingDate)
-        val edtTime = findViewById<EditText>(R.id.edtMovingTime)
+        val edtType = findViewById<EditText>(R.id.edtMovingType)
         val btnSave = findViewById<Button>(R.id.btnSaveMoving)
 
         btnSave.setOnClickListener {
+            val name = edtName.text.toString().trim()
+            val apt = edtApt.text.toString().trim()
             val date = edtDate.text.toString().trim()
-            val time = edtTime.text.toString().trim()
+            val type = edtType.text.toString().trim()
 
-            if (date.isEmpty() || time.isEmpty()) {
-                Toast.makeText(this, "Please fill in both Date and Time!", Toast.LENGTH_SHORT).show()
+            if (name.isEmpty() || apt.isEmpty() || date.isEmpty() || type.isEmpty()) {
+                Toast.makeText(this, "Please fill in all fields!", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Moving scheduled successfully for $date at $time!", Toast.LENGTH_LONG).show()
-                finish() // Fecha a tela e volta ao painel principal automaticamente
+                Toast.makeText(this, "Moving scheduled successfully!", Toast.LENGTH_LONG).show()
+                finish()
             }
         }
     }
