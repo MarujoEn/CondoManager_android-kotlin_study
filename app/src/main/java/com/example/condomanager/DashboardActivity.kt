@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 
 class DashboardActivity : AppCompatActivity() {
 
@@ -14,14 +15,18 @@ class DashboardActivity : AppCompatActivity() {
         // Mapeando o botão de Contatos como exemplo
         val btnContacts = findViewById<Button>(R.id.btnContacts)
         val btnInvoices = findViewById<Button>(R.id.btnInvoices)
+        val btnReservations = findViewById<Button>(R.id.btnReservations)
+
 
         btnInvoices.setOnClickListener {
-            // No futuro, aqui abriremos a tela de Boletos
-            Toast.makeText(this, "Opening Bills...", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, InvoicesActivity::class.java)
+            startActivity(intent)
         }
 
-        btnContacts.setOnClickListener {
-            Toast.makeText(this, "Opening Contacts...", Toast.LENGTH_SHORT).show()
+
+        btnReservations.setOnClickListener {
+            val intent = Intent(this, ReservationsActivity::class.java)
+            startActivity(intent)
         }
 
         // Repita o processo para os outros botões conforme formos criando as telas
