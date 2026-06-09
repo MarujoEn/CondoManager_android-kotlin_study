@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() { // Se renomeou para LoginActivity, mu
 
             if (emailText == "admin@admin.com" && passwordText == "1234") {
                 // Apontando temporariamente para si mesma para não dar erro
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, DashboardActivity::class.java)
                 startActivity(intent)
                 finish()
             } else {

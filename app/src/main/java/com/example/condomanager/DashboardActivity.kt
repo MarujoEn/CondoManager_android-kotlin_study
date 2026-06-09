@@ -1,20 +1,29 @@
-package com.example.condomanager
+package com.example.condomanager // Verifique seu package
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class DashboardActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // Mapeando o botão de Contatos como exemplo
+        val btnContacts = findViewById<Button>(R.id.btnContacts)
+        val btnInvoices = findViewById<Button>(R.id.btnInvoices)
+
+        btnInvoices.setOnClickListener {
+            // No futuro, aqui abriremos a tela de Boletos
+            Toast.makeText(this, "Opening Bills...", Toast.LENGTH_SHORT).show()
         }
+
+        btnContacts.setOnClickListener {
+            Toast.makeText(this, "Opening Contacts...", Toast.LENGTH_SHORT).show()
+        }
+
+        // Repita o processo para os outros botões conforme formos criando as telas
     }
 }

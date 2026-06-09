@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CondoManager">
         <activity
+            android:name=".InvoicesActivity"
+            android:exported="false" />
+        <activity
             android:name=".DashboardActivity"
             android:exported="false" />
         <activity
