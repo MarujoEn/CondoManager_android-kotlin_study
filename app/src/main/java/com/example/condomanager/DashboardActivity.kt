@@ -36,6 +36,13 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnWall = findViewById<Button>(R.id.btnWall)
+
+        btnWall.setOnClickListener {
+            val intent = Intent(this, WallActivity::class.java)
+            startActivity(intent)
+        }
+
         // Repita o processo para os outros botões conforme formos criando as telas
     }
 }
